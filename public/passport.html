@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opportunity Passport — Oppora</title>
+<meta name="description" content="Your Oppora Opportunity Passport: education, skills, experience, interests, goals and preferences — the source of every match.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="vendor/fonts/manrope/400.css"><link rel="stylesheet" href="vendor/fonts/manrope/600.css"><link rel="stylesheet" href="vendor/fonts/manrope/700.css"><link rel="stylesheet" href="vendor/fonts/manrope/800.css">
+<link rel="stylesheet" href="vendor/fonts/sora/600.css"><link rel="stylesheet" href="vendor/fonts/sora/700.css"><link rel="stylesheet" href="vendor/fonts/sora/800.css">
+<link rel="stylesheet" href="vendor/fonts/comfortaa/700.css">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="passport" data-shell="app">
+<div class="passport-hero mb-4" id="ppHero"></div>
+<div class="panel mb-4">
+  <div class="panel-head"><h3>Passport sections</h3><span class="small" style="color:var(--muted)">Weights show how much each section drives matching</span></div>
+  <div class="row g-3" id="ppSections"></div>
+</div>
+<div class="row g-4">
+  <div class="col-lg-7">
+    <div class="pp-section" id="basics">
+      <div class="pp-head"><span class="pp-ic"><i class="bi bi-person-badge"></i></span><div><h3>Basics & location</h3><span class="small" style="color:var(--muted)">Who you are and where you're based</span></div></div>
+      <div id="formBasics"></div>
+    </div>
+    <div class="pp-section" id="education">
+      <div class="pp-head"><span class="pp-ic"><i class="bi bi-mortarboard-board"></i></span><div><h3>Education & certifications</h3><span class="small" style="color:var(--muted)">Level, field, institution and certificates</span></div></div>
+      <div id="formEducation"></div>
+    </div>
+    <div class="pp-section" id="skills">
+      <div class="pp-head"><span class="pp-ic"><i class="bi bi-lightning-charge"></i></span><div><h3>Skills & experience</h3><span class="small" style="color:var(--muted)">The raw material of every match score</span></div><span class="st pill pill-blue">Drives 32% of matching</span></div>
+      <div id="formSkills"></div>
+      <span id="experience"></span>
+    </div>
+    <div class="pp-section" id="goals">
+      <div class="pp-head"><span class="pp-ic"><i class="bi bi-stars"></i></span><div><h3>Interests & goals</h3><span class="small" style="color:var(--muted)">Sectors you care about and where you're headed</span></div></div>
+      <div id="formInterests"></div>
+    </div>
+    <div class="pp-section" id="preferences">
+      <div class="pp-head"><span class="pp-ic"><i class="bi bi-sliders"></i></span><div><h3>Preferences</h3><span class="small" style="color:var(--muted)">Types you follow, work style and target countries</span></div></div>
+      <div id="formPrefs"></div>
+    </div>
+  </div>
+  <div class="col-lg-5">
+    <div class="panel mb-4">
+      <div class="panel-head"><h3>Matching strengths & gaps</h3></div>
+      <div id="ppStrengths"></div>
+    </div>
+    <div class="panel mb-4">
+      <div class="panel-head"><h3>Achievements</h3></div>
+      <div class="d-grid gap-2" id="achGrid"></div>
+    </div>
+  </div>
+</div>
+<div class="panel mt-4">
+  <div class="panel-head"><div><h3>Matched opportunities</h3><p>Live preview of what your Passport unlocks right now</p></div><a class="link-arrow" href="explore.html?sort=match">Open board <i class="bi bi-arrow-right"></i></a></div>
+  <div class="opp-grid" id="ppMatches"></div>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="module" src="js/pages/passport.js"></script>
+</body>
+</html>

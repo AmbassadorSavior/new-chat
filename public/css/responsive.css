@@ -1,0 +1,126 @@
+/* ============================================================
+   OPPORA — Responsive recomposition
+   Desktop-first tokens live in style.css; this file re-composes
+   layouts for laptop / tablet / mobile instead of shrinking them.
+   ============================================================ */
+
+/* ---------- Laptop ---------- */
+@media (max-width: 1280px) {
+  .app-shell { grid-template-columns: 240px minmax(0, 1fr) 290px; gap: 20px; padding: 22px 18px 50px; }
+  .cat-grid { grid-template-columns: repeat(3, 1fr); }
+  .opp-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .logo-row { grid-template-columns: repeat(3, 1fr); row-gap: 26px; }
+  .persona-card { width: 152px; }
+}
+
+@media (max-width: 1120px) {
+  .app-shell { grid-template-columns: 232px minmax(0, 1fr); }
+  .app-shell .app-rail { display: none; }
+  .app-shell.rail-forced .app-rail { display: flex; }
+  .nav-links { display: none; }
+  .nav-burger { display: inline-flex !important; }
+  .opp-detail-layout { grid-template-columns: minmax(0, 1fr) 312px; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 991px) {
+  .section { padding: 64px 0; }
+  .hero-home { padding: 44px 0 64px; }
+  .hero-visual { min-height: 470px; margin-top: 46px; }
+  .hero-stats { max-width: 100%; }
+  .mission-grid { grid-template-columns: 1fr; gap: 36px; }
+  .mission-media { order: -1; }
+  .listing-layout { grid-template-columns: 1fr; }
+  .filter-panel { position: static; max-height: none; display: none; }
+  .filter-panel.open { display: block; }
+  .filter-toggle-mobile { display: inline-flex !important; }
+  .opp-detail-layout { grid-template-columns: 1fr; }
+  .opp-detail-aside { position: static !important; order: -1; }
+  .auth-split { grid-template-columns: 1fr; }
+  .auth-brand { padding: 34px 26px; min-height: 250px; }
+  .auth-brand .ab-content { margin: 0; }
+  .auth-brand .ab-hide-sm { display: none; }
+  .signup-page .auth-split { margin: 0; min-height: 100vh; border: 0; border-radius: 0; }
+  .signup-page .auth-brand { padding: 28px 26px; }
+  .signup-page .auth-brand .ab-content { margin: 0; }
+  .signup-page .auth-brand h2 { font-size: 28px; }
+  .signup-fields-row { grid-template-columns: 1fr; gap: 0; }
+  .login-page .auth-split { margin: 0; min-height: 100vh; border: 0; border-radius: 0; }
+  .login-page .auth-brand { padding: 28px 26px; }
+  .login-page .auth-brand .ab-content { margin: 0; }
+  .login-page .auth-brand h2 { font-size: 28px; }
+  .app-shell { grid-template-columns: minmax(0, 1fr); padding: 18px 14px 44px; }
+  .app-sidebar { display: none; }
+  .app-sidebar.open { display: block; position: fixed; inset: 0 auto 0 0; width: 280px; z-index: 1050; background: #fff; box-shadow: var(--sh-lg); height: 100vh; }
+  .sidebar-toggle-mobile { display: inline-flex !important; }
+  .pipeline { grid-template-columns: repeat(3, 1fr); }
+  .trk-row { grid-template-columns: minmax(0, 1fr) 140px 110px; }
+  .trk-row .trk-deadline, .trk-row .trk-applied { display: none; }
+  .stats-band { grid-template-columns: repeat(2, 1fr); }
+  .cta-band { padding: 40px 30px; }
+  .opp-footer .ft-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .opp-footer .ft-brand { grid-column: 1 / -1; }
+  .kv-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 767px) {
+  body { font-size: 15px; }
+  .container-opp, .container-narrow { padding-inline: 18px; }
+  .section { padding: 52px 0; }
+  .section-head { flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 26px; }
+  .hero-home { padding: 30px 0 56px; }
+  .hero-title { font-size: clamp(2.1rem, 9vw, 2.7rem); }
+  .hero-search { flex-wrap: wrap; padding: 10px; }
+  .hero-search .select-opp { width: 100%; border-bottom: 1px solid var(--line); border-radius: 10px 10px 0 0; }
+  .hero-search .hs-divider { display: none; }
+  .hero-search .btn-op { width: 100%; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); row-gap: 14px; }
+  .hero-stats .hs-cell:nth-child(3) { border-left: 0; }
+  .hero-visual { min-height: 430px; margin-top: 40px; }
+  .hero-photo { width: min(280px, 72%); }
+  .persona-card { width: 132px; padding: 8px; }
+  .persona-card .pc-t { font-size: 12px; }
+  .persona-card .pc-s { font-size: 10px; }
+  .persona-card.p1 { left: -2%; top: 2%; }
+  .persona-card.p2 { right: -2%; }
+  .persona-card.p3 { left: -2%; bottom: 14%; }
+  .persona-card.p4 { right: -2%; bottom: 18%; }
+  .hero-join span { max-width: 150px; font-size: 11px; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .opp-grid, .opp-grid.cols-3 { grid-template-columns: 1fr; }
+  .logo-row { grid-template-columns: repeat(2, 1fr); }
+  .stats-band { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .stats-band .sb b { font-size: 26px; }
+  .pipeline { grid-template-columns: repeat(2, 1fr); }
+  .trk-row { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .trk-row .trk-status, .trk-row .trk-actions { width: 100%; }
+  .opp-footer .ft-grid { grid-template-columns: 1fr; gap: 26px; padding-bottom: 32px; }
+  .ft-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .ft-bottom .ft-links { margin-left: 0; gap: 16px; flex-wrap: wrap; }
+  .cta-band { padding: 34px 22px; border-radius: 20px; }
+  .passport-hero { padding: 24px 20px; }
+  .onb-card { padding: 24px 18px; }
+  .thread { height: calc(100vh - 190px); }
+  .msg { max-width: 88%; }
+  .toast-stack { right: 12px; left: 12px; bottom: 12px; max-width: none; }
+  .app-topbar .greet h1 { font-size: 20px; }
+  .match-row { flex-wrap: wrap; }
+  .modal-opp .modal-body { padding: 18px; }
+}
+
+@media (max-width: 420px) {
+  .cat-grid { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: 1fr 1fr; }
+  .persona-card { width: 118px; }
+  .pipeline { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- Helpers toggled by breakpoints ---------- */
+.nav-burger, .filter-toggle-mobile, .sidebar-toggle-mobile { display: none; }
+
+/* ---------- Print ---------- */
+@media print {
+  .opp-nav, .opp-footer, .app-sidebar, .app-rail, .toast-stack { display: none !important; }
+  body { background: #fff; }
+}

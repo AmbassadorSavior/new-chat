@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — Oppora</title>
+<meta name="description" content="Your personalized Oppora dashboard: new matches, saved opportunities, applications and upcoming deadlines.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="vendor/fonts/manrope/400.css"><link rel="stylesheet" href="vendor/fonts/manrope/600.css"><link rel="stylesheet" href="vendor/fonts/manrope/700.css"><link rel="stylesheet" href="vendor/fonts/manrope/800.css">
+<link rel="stylesheet" href="vendor/fonts/sora/600.css"><link rel="stylesheet" href="vendor/fonts/sora/700.css"><link rel="stylesheet" href="vendor/fonts/sora/800.css">
+<link rel="stylesheet" href="vendor/fonts/comfortaa/700.css">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="dashboard" data-shell="app">
+<div class="row g-3 mb-4" id="statGrid"></div>
+<div class="panel mb-4">
+  <div class="panel-head">
+    <div><h2>Top matches for you</h2><p>Based on your Opportunity Passport</p></div>
+    <a class="link-arrow" href="explore.html?sort=match">View all matches <i class="bi bi-arrow-right"></i></a>
+  </div>
+  <div id="topMatches"></div>
+</div>
+<div class="row g-4">
+  <div class="col-lg-7">
+    <div class="panel h-100">
+      <div class="panel-head"><h3>AI recommendations</h3><span class="pill pill-grad">Oppora AI</span></div>
+      <div id="aiRecs"></div>
+    </div>
+  </div>
+  <div class="col-lg-5">
+    <div class="panel h-100">
+      <div class="panel-head"><h3>Recent activity</h3></div>
+      <div id="activityFeed"></div>
+    </div>
+  </div>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="module" src="js/pages/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore Opportunities — Oppora</title>
+<meta name="description" content="Search and filter scholarships, jobs, grants, internships, fellowships, competitions, remote roles and volunteering across Africa and the world.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="vendor/fonts/manrope/400.css"><link rel="stylesheet" href="vendor/fonts/manrope/600.css"><link rel="stylesheet" href="vendor/fonts/manrope/700.css"><link rel="stylesheet" href="vendor/fonts/manrope/800.css">
+<link rel="stylesheet" href="vendor/fonts/sora/600.css"><link rel="stylesheet" href="vendor/fonts/sora/700.css"><link rel="stylesheet" href="vendor/fonts/sora/800.css">
+<link rel="stylesheet" href="vendor/fonts/comfortaa/700.css">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="explore" data-shell="public">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-nav"></div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container-opp">
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-3">
+        <div>
+          <span class="eyebrow"><i class="bi bi-compass"></i>Discovery board</span>
+          <h1 class="mt-2">Explore opportunities</h1>
+          <p>Every verified demo listing in one board — filter by category, country, work mode, funding and deadline, or ask in plain language.</p>
+        </div>
+        <span class="pill pill-blue"><i class="bi bi-database"></i>Demo dataset · 44 listings</span>
+      </div>
+      <form class="hero-search mt-4" id="searchForm" role="search" style="max-width:720px">
+        <i class="bi bi-search ms-2" style="color:var(--faint)"></i>
+        <label class="visually-hidden" for="searchInput">Search opportunities</label>
+        <input class="hs-input" id="searchInput" type="search" placeholder="Search by title, organisation, skill, country…">
+        <button class="btn-op btn-op-soft" type="button" id="nlToggle" aria-expanded="false" aria-controls="nlBox" title="Search with plain language"><i class="bi bi-stars"></i><span class="d-none d-sm-inline">AI search</span></button>
+        <button class="btn-op btn-op-primary" type="submit"><i class="bi bi-search"></i>Search</button>
+      </form>
+      <div class="panel mt-3" id="nlBox" hidden style="max-width:720px">
+        <label class="field-label" for="nlInput">Ask in plain language</label>
+        <textarea class="textarea-opp" id="nlInput" rows="2" placeholder="e.g. Find fully funded master's scholarships in Europe for African students studying computer science"></textarea>
+        <div class="d-flex flex-wrap gap-2 mt-2 mb-2">
+          <button class="tag-chip" data-nl-example="Find fully funded master's scholarships in Europe for African students studying computer science">Example 1</button>
+          <button class="tag-chip" data-nl-example="Show remote software engineering internships that accept applicants from Nigeria">Example 2</button>
+          <button class="tag-chip" data-nl-example="grants for women founders in agriculture closing soon">Example 3</button>
+        </div>
+        <button class="btn-op btn-op-primary btn-op-sm" id="nlRun" type="button"><i class="bi bi-lightning-charge"></i>Interpret & search</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container-opp">
+      <div class="results-bar">
+        <button class="btn-op btn-op-outline btn-op-sm filter-toggle-mobile" id="filterToggle"><i class="bi bi-funnel"></i>Filters</button>
+        <span id="resultsBar"></span>
+        <div class="active-chips" id="activeChips"></div>
+        <div class="ms-auto d-flex align-items-center gap-2">
+          <label class="small fw-bold" for="sortSel" style="color:var(--muted)">Sort</label>
+          <select class="select-opp" id="sortSel" style="width:auto;padding:9px 36px 9px 12px;font-size:13.5px"></select>
+        </div>
+      </div>
+      <div class="listing-layout">
+        <aside class="filter-panel" id="filterPanel" aria-label="Filters"></aside>
+        <div>
+          <div class="opp-grid" id="resultsGrid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="module" src="js/pages/explore.js"></script>
+</body>
+</html>

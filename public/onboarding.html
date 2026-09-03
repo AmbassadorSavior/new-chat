@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Set up your Passport — Oppora</title>
+<meta name="description" content="Four quick steps to build your Oppora Opportunity Passport and unlock personalized matching.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="vendor/fonts/manrope/400.css"><link rel="stylesheet" href="vendor/fonts/manrope/600.css"><link rel="stylesheet" href="vendor/fonts/manrope/700.css"><link rel="stylesheet" href="vendor/fonts/manrope/800.css">
+<link rel="stylesheet" href="vendor/fonts/sora/600.css"><link rel="stylesheet" href="vendor/fonts/sora/700.css"><link rel="stylesheet" href="vendor/fonts/sora/800.css">
+<link rel="stylesheet" href="vendor/fonts/comfortaa/700.css">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="onboarding" data-shell="public" style="background:var(--bg)">
+<div class="container-narrow pt-4 d-flex align-items-center justify-content-between">
+  <span id="onbBrand"></span>
+  <button class="btn-op btn-op-ghost btn-op-sm" id="skipBtn">Skip for now</button>
+</div>
+<div class="onb-wrap">
+  <p class="eyebrow" id="onbLabel">Step 1 of 4</p>
+  <div class="onb-steps" id="onbSteps" aria-hidden="true"></div>
+  <div class="onb-card" id="onbCard"></div>
+  <div class="d-flex justify-content-between mt-4">
+    <button class="btn-op btn-op-outline" id="prevBtn"><i class="bi bi-arrow-left"></i>Back</button>
+    <button class="btn-op btn-op-primary" id="nextBtn">Continue <i class="bi bi-arrow-right"></i></button>
+  </div>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="module" src="js/pages/onboarding.js"></script>
+</body>
+</html>

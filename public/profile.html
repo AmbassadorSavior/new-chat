@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profile & settings — Oppora</title>
+<meta name="description" content="Manage your Oppora account details, password, notification preferences and data.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="vendor/fonts/manrope/400.css"><link rel="stylesheet" href="vendor/fonts/manrope/600.css"><link rel="stylesheet" href="vendor/fonts/manrope/700.css"><link rel="stylesheet" href="vendor/fonts/manrope/800.css">
+<link rel="stylesheet" href="vendor/fonts/sora/600.css"><link rel="stylesheet" href="vendor/fonts/sora/700.css"><link rel="stylesheet" href="vendor/fonts/sora/800.css">
+<link rel="stylesheet" href="vendor/fonts/comfortaa/700.css">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="profile" data-shell="app">
+<div class="row g-4">
+  <div class="col-lg-7">
+    <div class="panel mb-4"><div class="panel-head"><h3>Account</h3></div><div id="acctForm"></div></div>
+    <div class="panel mb-4"><div class="panel-head"><h3>Password</h3></div><div id="passForm"></div></div>
+    <div class="panel" style="border-color:#f3c9c4"><div class="panel-head"><h3 style="color:var(--red)">Danger zone</h3></div><div id="dangerZone"></div></div>
+  </div>
+  <div class="col-lg-5">
+    <div class="panel"><div class="panel-head"><h3>Notification preferences</h3></div><div id="prefForm"></div></div>
+  </div>
+</div>
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="module" src="js/pages/profile.js"></script>
+</body>
+</html>

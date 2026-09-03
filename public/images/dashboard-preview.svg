@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 820" role="img" aria-labelledby="title desc">
+  <title id="title">Oppora dashboard preview</title>
+  <desc id="desc">A preview of the Oppora dashboard with matches, saved opportunities, applications and deadlines.</desc>
+  <defs>
+    <linearGradient id="brand" x1="0" x2="1"><stop stop-color="#2f6bff"/><stop offset="1" stop-color="#00c9a7"/></linearGradient>
+    <linearGradient id="hero" x1="0" x2="1"><stop stop-color="#eef4ff"/><stop offset="1" stop-color="#f3fbf8"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0b1f3a" flood-opacity=".10"/></filter>
+  </defs>
+  <rect width="1440" height="820" rx="24" fill="#f6f8fc"/>
+  <rect width="250" height="820" rx="24" fill="#fff"/>
+  <path d="M226 0h24v820h-24z" fill="#e4eaf3"/>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(35 34)">
+      <circle cx="22" cy="22" r="19" fill="none" stroke="url(#brand)" stroke-width="8"/>
+      <text x="53" y="29" font-size="25" font-weight="700" fill="#0b1f3a">oppora</text>
+    </g>
+    <g transform="translate(28 126)" font-size="16" font-weight="700">
+      <rect x="0" y="0" width="190" height="48" rx="11" fill="#e8f0fe"/><text x="18" y="30" fill="#1257d0">Dashboard</text>
+      <text x="18" y="82" fill="#46586f">Explore Opportunities</text>
+      <text x="18" y="134" fill="#46586f">My Matches</text>
+      <text x="18" y="186" fill="#46586f">Saved</text>
+      <text x="18" y="238" fill="#46586f">Applications</text>
+      <text x="18" y="290" fill="#46586f">Opportunity Passport</text>
+      <text x="18" y="342" fill="#46586f">Messages</text>
+      <text x="18" y="394" fill="#46586f">Notifications</text>
+    </g>
+    <g transform="translate(292 42)">
+      <text x="0" y="22" font-size="28" font-weight="700" fill="#0b1f3a">Good morning, Elijah</text>
+      <text x="0" y="51" font-size="15" fill="#6b7c93">Here are the opportunities Oppora matched to you today.</text>
+      <circle cx="1075" cy="25" r="22" fill="url(#brand)"/><text x="1062" y="31" font-size="13" font-weight="700" fill="#fff">EW</text>
+    </g>
+    <g transform="translate(292 122)" filter="url(#shadow)">
+      <g>
+        <rect width="250" height="118" rx="16" fill="#fff" stroke="#e4eaf3"/><text x="22" y="29" font-size="14" font-weight="700" fill="#6b7c93">New matches</text><text x="22" y="73" font-size="34" font-weight="700" fill="#0b1f3a">12</text><text x="22" y="98" font-size="13" font-weight="700" fill="#0f9d63">+4 today</text>
+        <rect x="272" width="250" height="118" rx="16" fill="#fff" stroke="#e4eaf3"/><text x="294" y="29" font-size="14" font-weight="700" fill="#6b7c93">Saved</text><text x="294" y="73" font-size="34" font-weight="700" fill="#0b1f3a">8</text><text x="294" y="98" font-size="13" font-weight="700" fill="#1257d0">View all</text>
+        <rect x="544" width="250" height="118" rx="16" fill="#fff" stroke="#e4eaf3"/><text x="566" y="29" font-size="14" font-weight="700" fill="#6b7c93">Applications</text><text x="566" y="73" font-size="34" font-weight="700" fill="#0b1f3a">5</text><text x="566" y="98" font-size="13" font-weight="700" fill="#6a5ae0">2 in interview</text>
+        <rect x="816" width="250" height="118" rx="16" fill="#fff" stroke="#e4eaf3"/><text x="838" y="29" font-size="14" font-weight="700" fill="#6b7c93">Upcoming deadlines</text><text x="838" y="73" font-size="34" font-weight="700" fill="#0b1f3a">7</text><text x="838" y="98" font-size="13" font-weight="700" fill="#c2740a">next 7 days</text>
+      </g>
+    </g>
+    <g transform="translate(292 280)" filter="url(#shadow)">
+      <rect width="690" height="460" rx="18" fill="#fff" stroke="#e4eaf3"/><text x="26" y="39" font-size="21" font-weight="700" fill="#0b1f3a">Top matches for you</text><text x="26" y="64" font-size="13" fill="#6b7c93">Based on your Opportunity Passport</text><text x="565" y="45" font-size="13" font-weight="700" fill="#1d6ff2">View all matches</text>
+      <g transform="translate(26 98)"><circle cx="22" cy="22" r="22" fill="#e8f0fe"/><text x="11" y="27" font-size="11" font-weight="700" fill="#1257d0">MF</text><text x="62" y="17" font-size="14" font-weight="700" fill="#0b1f3a">Mastercard Foundation Scholars</text><text x="62" y="39" font-size="12" fill="#6b7c93">Mastercard Foundation  .  Fully funded</text><rect x="500" y="5" width="78" height="30" rx="15" fill="#e5f7ee"/><text x="516" y="25" font-size="12" font-weight="700" fill="#0f9d63">94%</text></g>
+      <path d="M26 154h638M26 155v1" stroke="#e4eaf3"/>
+      <g transform="translate(26 182)"><circle cx="22" cy="22" r="22" fill="#fdf3e2"/><text x="12" y="27" font-size="11" font-weight="700" fill="#c2740a">CR</text><text x="62" y="17" font-size="14" font-weight="700" fill="#0b1f3a">Climate Research Fellowship</text><text x="62" y="39" font-size="12" fill="#6b7c93">Rockefeller Foundation  .  Fully funded</text><rect x="500" y="5" width="78" height="30" rx="15" fill="#fdf3e2"/><text x="516" y="25" font-size="12" font-weight="700" fill="#c2740a">82%</text></g>
+      <path d="M26 238h638M26 239v1" stroke="#e4eaf3"/>
+      <g transform="translate(26 266)"><circle cx="22" cy="22" r="22" fill="#eeecfd"/><text x="12" y="27" font-size="11" font-weight="700" fill="#6a5ae0">MR</text><text x="62" y="17" font-size="14" font-weight="700" fill="#0b1f3a">Mandela Rhodes Scholarship</text><text x="62" y="39" font-size="12" fill="#6b7c93">Mandela Rhodes Foundation  .  In 60 days</text><rect x="500" y="5" width="78" height="30" rx="15" fill="#eeecfd"/><text x="516" y="25" font-size="12" font-weight="700" fill="#6a5ae0">76%</text></g>
+      <path d="M26 322h638M26 323v1" stroke="#e4eaf3"/>
+      <g transform="translate(26 350)"><circle cx="22" cy="22" r="22" fill="#e5f7ee"/><text x="12" y="27" font-size="11" font-weight="700" fill="#0f9d63">TE</text><text x="62" y="17" font-size="14" font-weight="700" fill="#0b1f3a">Entrepreneurship Grant</text><text x="62" y="39" font-size="12" fill="#6b7c93">Tony Elumelu Foundation  .  In 33 days</text><rect x="500" y="5" width="78" height="30" rx="15" fill="#e5f7ee"/><text x="516" y="25" font-size="12" font-weight="700" fill="#0f9d63">71%</text></g>
+    </g>
+    <g transform="translate(1002 280)" filter="url(#shadow)">
+      <rect width="356" height="220" rx="18" fill="#fff" stroke="#e4eaf3"/><text x="24" y="38" font-size="19" font-weight="700" fill="#0b1f3a">AI recommendations</text><rect x="250" y="17" width="80" height="28" rx="14" fill="#e8f0fe"/><text x="267" y="36" font-size="12" font-weight="700" fill="#1257d0">Oppora AI</text><text x="24" y="86" font-size="14" font-weight="700" fill="#0b1f3a">Your strongest match is ready</text><text x="24" y="117" font-size="13" fill="#46586f">Field and location align</text><text x="24" y="147" font-size="13" fill="#46586f">Deadline fits your preferences</text><text x="24" y="177" font-size="13" fill="#46586f">Passport gaps are clearly explained</text>
+      <rect x="0" y="244" width="356" height="496" rx="18" fill="#fff" stroke="#e4eaf3"/><text x="24" y="283" font-size="19" font-weight="700" fill="#0b1f3a">Recent activity</text><text x="24" y="335" font-size="13" fill="#46586f">Application tracked</text><text x="24" y="360" font-size="12" fill="#6b7c93">Mandela Rhodes Scholarship</text><text x="24" y="414" font-size="13" fill="#46586f">Passport updated</text><text x="24" y="439" font-size="12" fill="#6b7c93">Added three new skills</text><text x="24" y="493" font-size="13" fill="#46586f">New match found</text><text x="24" y="518" font-size="12" fill="#6b7c93">Chevening Scholarship</text>
+    </g>
+  </g>
+</svg>

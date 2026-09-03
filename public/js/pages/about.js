@@ -1,5 +1,6 @@
 import "../app.js";
 import { $, toast } from "../ui.js";
+import { saveDemoContact } from "../demo.js";
 
 /* Contact form -> real backend endpoint */
 $("#contactForm")?.addEventListener("submit", async (e) => {
@@ -19,8 +20,11 @@ $("#contactForm")?.addEventListener("submit", async (e) => {
     const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name, email, topic: $("#cTopic").value, message: msg }) });
     const data = await res.json();
     if (data.ok) { toast("Message sent 📨", data.message); e.target.reset(); }
-    else { err.textContent = data.error || "Something went wrong."; }
-  } catch { err.textContent = "Network error — please try again."; }
+    else throw new Error(data.error || "Message failed");
+  } catch {
+    const data = saveDemoContact({ name, email, topic: $("#cTopic").value, message: msg });
+    toast("Message saved", data.message, "info"); e.target.reset();
+  }
   finally { btn.disabled = false; btn.innerHTML = '<i class="bi bi-send"></i>Send message'; }
 });
 

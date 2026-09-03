@@ -8,6 +8,7 @@ import { Store } from "./store.js";
 import * as UI from "./ui.js";
 import * as AI from "./ai.js";
 import { getOpp } from "./data.js";
+import { saveDemoSubscription } from "./demo.js";
 
 window.OPP_AI = AI;
 window.OPP_STORE = Store;
@@ -97,9 +98,10 @@ document.addEventListener("submit", async (e) => {
     const res = await fetch("/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, source: "footer" }) });
     const data = await res.json();
     if (data.ok) { setMsg(data.message, true); form.reset(); UI.toast("Subscribed 📬", "Weekly opportunity updates are on their way."); }
-    else { setMsg(data.error || "Something went wrong.", false); }
+    else throw new Error(data.error || "Subscription failed");
   } catch {
-    setMsg("Network error — please try again.", false);
+    const data = saveDemoSubscription(email);
+    setMsg(data.message, true); form.reset(); UI.toast("Demo subscription saved", "The backend is unavailable, so this is stored locally.", "info");
   } finally {
     btn.disabled = false;
     btn.innerHTML = "Subscribe";

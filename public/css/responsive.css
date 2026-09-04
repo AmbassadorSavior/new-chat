@@ -78,7 +78,7 @@
   .hero-stats { grid-template-columns: repeat(2, 1fr); row-gap: 14px; }
   .hero-stats .hs-cell:nth-child(3) { border-left: 0; }
   .hero-visual { min-height: 430px; margin-top: 40px; }
-  .hero-photo { width: min(280px, 72%); }
+  .hero-photo { width(270px,70%); }
   .persona-card { width: 132px; padding: 8px; }
   .persona-card .pc-t { font-size: 12px; }
   .persona-card .pc-s { font-size: 10px; }

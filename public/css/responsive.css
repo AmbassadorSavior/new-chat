@@ -75,10 +75,15 @@
   .hero-search .select-opp { width: 100%; border-bottom: 1px solid var(--line); border-radius: 10px 10px 0 0; }
   .hero-search .hs-divider { display: none; }
   .hero-search .btn-op { width: 100%; }
+  .hero-search .hs-input { width: 100%; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); row-gap: 14px; }
   .hero-stats .hs-cell:nth-child(3) { border-left: 0; }
   .hero-visual { min-height: 430px; margin-top: 40px; }
-  .hero-photo { width(270px,70%); }
+  .hero-photo {
+    width: min(270px, 70%);
+    max-width: 100%;
+    top: 8px;
+  }
   .persona-card { width: 132px; padding: 8px; }
   .persona-card .pc-t { font-size: 12px; }
   .persona-card .pc-s { font-size: 10px; }
@@ -86,6 +91,14 @@
   .persona-card.p2 { right: -2%; }
   .persona-card.p3 { left: -2%; bottom: 14%; }
   .persona-card.p4 { right: -2%; bottom: 18%; }
+  .hero-join {
+    left: 50%;
+    bottom: 6px;
+    transform: translateX(-50%);
+    width: min(86%, 330px);
+    padding: 8px 12px 8px 8px;
+    gap: 8px;
+  }
   .hero-join span { max-width: 150px; font-size: 11px; }
   .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .opp-grid, .opp-grid.cols-3 { grid-template-columns: 1fr; }

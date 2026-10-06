@@ -106,8 +106,8 @@
     display: flex;
     align-items: center;
   }
-  .brand { margin-right: 8px; }
-  .brand .brand-word { font-size: 16px; }
+  .brand { margin-right: 8px; flex-shrink: 0; }
+  .brand .brand-word { font-size: 16px; white-space: nowrap; }
   .brand svg { width: 24px; height: 24px; }
   .nav-links { 
     display: none; 
@@ -140,16 +140,21 @@
     flex-shrink: 0;
   }
   .nav-cta { 
-    margin-left: 0; 
-    gap: 6px;
-    order: -1;
-    margin-right: auto;
+    display: none !important;
   }
-  .nav-cta .btn-op { 
-    padding: 8px 14px;
-    font-size: 12px;
-    white-space: nowrap;
-    min-height: 36px;
+  .nav-cta.mobile-visible { 
+    display: flex !important;
+    order: 2;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding: 12px 14px 0;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .nav-cta.mobile-visible .btn-op { 
+    width: 100%; 
+    min-height: 40px;
   }
   .nav-dropdown-menu { 
     position: fixed; 
@@ -502,7 +507,7 @@
   .section-head h2 { font-size: clamp(1.1rem, 4vw, 1.5rem); }
   .tag-chip { padding: 4px 8px; font-size: 10px; }
   .opp-nav .nav-inner { gap: 6px; }
-  .nav-cta .btn-op { padding: 6px 10px; font-size: 11px; }
+  .nav-cta.mobile-visible .btn-op { font-size: 12px; padding: 10px 12px; }
 }
 
 /* ---------- Helpers toggled by breakpoints ---------- */

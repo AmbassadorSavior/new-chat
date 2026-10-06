@@ -1,0 +1,103 @@
+/* ============================================================
+   Mobile Enhancements - Additional mobile-specific improvements
+   ============================================================ */
+
+/* Touch-friendly interactions */
+@media (hover: none) and (pointer: coarse) {
+  .btn-op:active { transform: translateY(1px) scale(.97); }
+  .tag-chip:active { transform: scale(.98); }
+  a:active { opacity: .7; }
+}
+
+/* Smooth scrolling on mobile */
+@supports (scroll-behavior: smooth) {
+  html { scroll-behavior: smooth; }
+}
+
+/* Prevent zoom on input focus for iOS */
+@media screen and (max-width: 767px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  textarea,
+  select {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+/* Improve text readability on small screens */
+@media (max-width: 480px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+  
+  .opp-nav .nav-inner {
+    padding-right: max(12px, calc(12px + env(safe-area-inset-right)));
+  }
+}
+
+/* Better image handling on mobile */
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Link target sizing */
+a, button, input[type="submit"], input[type="button"], label {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Prevent layout shift from scrollbar */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Improved focus states for keyboard navigation */
+:focus-visible {
+  outline: 3px solid rgba(29, 111, 242, .35);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark mode support if needed */
+@media (prefers-color-scheme: dark) {
+  /* Can add dark mode styles here if implemented */
+}
+
+/* High contrast mode */
+@media (prefers-contrast: more) {
+  button, input, select, textarea {
+    border-width: 2px;
+  }
+}
